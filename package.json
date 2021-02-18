@@ -5,7 +5,7 @@
   "description": "Personal portfolio, for a UX designer. ",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start":"webpack --config webpack.config.js"
   },
   "author": "Anthony Argüello",
   "license": "ISC",

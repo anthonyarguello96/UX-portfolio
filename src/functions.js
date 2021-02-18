@@ -1,1 +1,3 @@
-export const someText= 'Hello World';
+export const someFunction= (string)=>{
+  console.log(string)
+}

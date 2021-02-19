@@ -5,11 +5,13 @@
   "description": "Personal portfolio, for a UX designer. ",
   "main": "index.js",
   "scripts": {
-    "start":"webpack --config webpack.config.js"
+    "start": "webpack --config webpack.config.js"
   },
   "author": "Anthony Argüello",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^5.0.2",
+    "style-loader": "^2.0.0",
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0"
   }

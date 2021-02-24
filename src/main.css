@@ -2,7 +2,10 @@ body{
   height: 100%;
   background-color: purple;
 }
-/* 
+
 #placeholder-img{
   background-image: url(assets/DSC01535.jpg);
-} */
+  height: 300px;
+  background-size:cover;
+
+}

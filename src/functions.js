@@ -11,3 +11,10 @@ export const displayMenu =(toggleId, navId)=>{
     })
   }
 }
+
+
+//Hides navigation menu after an element is clicked
+export const linkAction = () =>{
+const navMenu = document.getElementById('nav-menu');
+navMenu.classList.remove('show');
+}

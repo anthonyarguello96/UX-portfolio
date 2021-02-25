@@ -1,6 +1,7 @@
-import { someFunction } from './functions.js';
-import "./main.css";
+import * as lib from './functions.js';
+import './main.css';
 import 'boxicons'
 
 
-// someFunction("Hello Panchito!");
+//Diplays nav-menu
+lib.displayMenu('nav-toggle', 'nav-menu');

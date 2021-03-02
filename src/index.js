@@ -12,27 +12,25 @@ navLink.forEach(x => x.addEventListener('click', lib.linkAction))
 
 
 //scroll sections active link
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id]')
+window.addEventListener('scroll', scrollActive)
 
-
-const scrollActive = () => {
-  const scrollY= window.pageYOffset;
+function scrollActive(){
+  //GET VIEPORT VERTICAL POSITION
+  const scrollY = window.pageYOffset;
 
   sections.forEach(current =>{
-    const sectionHeight = current.OffsetHeight;
-    const sectionTop = current.OffsetTop - 50;
-    console.log(sectionHeight);
-    console.log(sectionTop);
-    sectionId = current.getAttriibute('id');
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 50;
+    let sectionId= current.getAttribute('id')
 
-    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-      document.querySelector('nav__menu a[href*='+ sectionId+']').classList.add('active')
+    // console.log(sectionId);
+
+    if(scrollY>sectionTop && scrollY <= sectionTop +sectionHeight){
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
     }else{
-      document.querySelector('.nav__menu a[href*=]'+ sectionId+']').classList.add('active')
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
     }
+    // console.log(sectionTop);
   })
 }
-
-
-
-window.addEventListener('scroll', scrollActive);

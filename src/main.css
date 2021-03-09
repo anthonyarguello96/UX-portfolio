@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 /* VARIABLES CSS */
 :root{
   --header-height: 3rem;
@@ -18,7 +19,7 @@
 /* FONTS & TYPOGRAPHY */
 :root{
   --body-font:'Montserrat', sans-serif;
-  --big-font-size: 6.25rem;
+  --big-font-size: 5.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --small-font-size: .813rem;
@@ -32,6 +33,7 @@
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
+    --title-font: 'Montserrat', sans-serif;
   }
 }
 
@@ -212,20 +214,20 @@ img{
   position: relative;
   background-color:var(--first-color);
   overflow: hidden;
-  min-height: 814px;
+  min-height: 750px;
 }
 
 
 .home__container{
   height: calc(100vh - var(--header-height));
-  row-gap: 5rem;
+  row-gap: 4rem;
 }
 
 .home__img{
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 395px;
+  width: 495px;
 }
 
 
@@ -312,8 +314,186 @@ margin: var(--mb-4) var(--mb-3) var(--mb-4) var(--mb-3);
 }
 
 
-.about__social-icon:hover{
-  color: var(--first-color);
+.about__question{
+  font-size:  var(--normal-font-size);
+}
+
+.about__social-icon i:hover{
+  animation-name: transformSocialButtons;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transformSocialButtons {
+  0%{
+    text-decoration: none; color:var(--text-color);
+  }
+  100%{
+    transform: scale(1.2);
+   color:var(--first-color);
+  }
+
+}
+
+
+  /* Skills */
+
+  .skills__container{
+    row-gap: 2rem;
+  }
+
+
+  .subtitle{
+    color: var(--first-color);
+    margin-top: var(--mb-4);
+    margin-bottom: var(--mb-3);
+    margin-left: var(--mb-2);
+  }
+
+
+  .skills__name{
+    color: var(--small-font-size);
+    margin-right: var(--mb-2);
+    margin-bottom: var(--mb-3);
+    padding: .25rem .5rem;
+    background-color: var(--white-color);
+    border-radius: .25rem;
+  }
+
+
+  .skills__box-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+
+  .skills__main-title{
+    color: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+    padding: .25rem .5rem;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 2rem);
+  }
+
+
+  .skills__name:hover{
+    animation-name: transformButtons;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* background-color: var(--first-color); */
+  }
+
+  @keyframes transformButtons {
+    0%{
+      text-decoration: none;
+    }
+    50%{
+      color:var(--white-color);
+      background-color: var(--first-color);
+    }
+    100%{
+      transform: scale(1.1);
+      color:var(--white-color);
+      background-color: var(--first-color);
+    }
 
   }
+
+  .skills__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--mb-4);
+  }
+
+
+.skills__img img{
+  border-radius: 0.5rem;
+}
+
+
+/* .education__subtitle{
+  color: var(--first-color);
+  margin-bottom: var(--mb-3);
+  margin-left: var(--mb-2);
+  margin-top: var(--mb-4);
+} */
+
+.education__box{
+margin: var(--mb-4);
+}
+
+.title{
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.skills__text{
+  margin: var(--mb-4);
+
+}
+
+
+/* Portfolio section */
+
+
+.portfolio{
+  background-color: var(--white-color);
+}
+
+
+.portfolio__container{
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+
+.portfolio__img{
+  position: relative;
+  overflow: hidden;
+}
+
+
+.portfolio__img img{
+  border-radius: .5rem;
+}
+
+
+.portfolio__link{
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+
+.portfolio__img:hover .portfolio__link{
+  bottom: 0;
+}
+
+
+.portfolio__link-name{
+  color: var(--dark-color)
+}
+
+
+/* contact */
+
+
+
 }

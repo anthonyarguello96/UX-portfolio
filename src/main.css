@@ -19,19 +19,19 @@
 /* FONTS & TYPOGRAPHY */
 :root{
   --body-font:'Montserrat', sans-serif;
-  --big-font-size: 5.5rem;
+  --big-font-size: 8.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --small-font-size: .813rem;
 }
 
 
-@media screen and (min-width:768px){
-  root{
+@media screen and (min-width: 892px){
+  :root{
     --body-font:'Montserrat', sans-serif;
-    --big-font-size: 10.5rem;
+    --big-font-size: 15.5rem;
     --h2-font-size: 2rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 1.3rem;
     --small-font-size: .875rem;
     --title-font: 'Montserrat', sans-serif;
   }
@@ -163,7 +163,7 @@ img{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 892px){
   .nav__menu{
     position: fixed;
     top: var(--header-height);
@@ -321,6 +321,7 @@ margin: var(--mb-4) var(--mb-3) var(--mb-4) var(--mb-3);
 
 .about__question{
   font-size:  var(--normal-font-size);
+  margin-left: 1.4rem;
 }
 
 .about__social-icon i:hover{
@@ -596,7 +597,7 @@ margin: var(--mb-4);
 
 
 /* Desktop Mecia queries */
-@media screen and (min-width: 767px){
+@media screen and (min-width: 892px){
 body{
   margin:0;
 }
@@ -665,20 +666,35 @@ body{
   max-width: 100vw;
 }
 .home__img{
-  width: 850px;
+  width: 1420px;
   right: -100px;
   /* margin-left: 200033rem; */
 }
 
 
 .about__container{
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr 1fr;
+  /* background-color: green; */
   align-items: center;
   text-align: initial;
   padding: 4rem 0;
-  display:grid;
-  justify-items: center;
+  display: grid;
+  /* justify-items: center; */
 }
+
+
+.about__text-box{
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  box-sizing: border-box;
+  font-size: var(--normal-font-size);
+}
+
+/* .about__text-social{
+  display: block;
+  margin-right: 6rem;
+} */
 
 .about__img{
   width: 385px;
@@ -686,6 +702,16 @@ body{
   align-self: center;
   margin-bottom: 2.50rem;
 }
+
+
+.about__img-box{
+/* background-color: green; */
+display: flex;
+justify-content: center;
+
+}
+
+
 .about__img img{
   width: 340px;
 }
@@ -697,6 +723,7 @@ margin-top: 8rem;
 
 .skills__text{
   margin-bottom: 6rem;
+  display: block;
 }
 
 }

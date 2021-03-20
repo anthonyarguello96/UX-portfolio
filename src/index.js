@@ -1,6 +1,9 @@
 import * as lib from './functions.js';
 import './main.css';
 import 'boxicons'
+const parallax = document.getElementsByClassName('skills__img');
+const spread = [...parallax];
+
 
 
 //Diplays nav-menu

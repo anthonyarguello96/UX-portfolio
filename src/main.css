@@ -510,6 +510,12 @@ margin: var(--mb-4);
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .home__scroll-link{
+    display: none;
+  }
+
+
+
 }
 
 
@@ -712,7 +718,7 @@ body{
 
 .home__img{
   width: 824px;
-  right: -10%;
+  right: -7%;
 }
 
 
